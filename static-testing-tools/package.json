@@ -1,0 +1,28 @@
+{
+  "name": "static-testing-tools",
+  "version": "1.0.0",
+  "description": "Lint Javascript by configuring & running ESLint",
+  "main": "index.js",
+  "scripts": {
+    "build": "babel src --extensions .js,.ts,.tsx --out-dir dist",
+    "lint": "eslint --ignore-path .eslintignore .",
+    "check-types": "tsc",
+    "prettier": "prettier --ignore-path .eslintignore --write \"**/*.+(js|ts|json)\"",
+    "format": "npm run prettier -- --write",
+    "check-format": "npm run prettier -- --list-different",
+    "validate": "npm run check-types && npm run check-format && npm run lint && npm run build"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/cli": "^7.12.7",
+    "@babel/core": "^7.12.7",
+    "@babel/preset-env": "^7.12.7"
+  },
+  "devDependencies": {
+    "@babel/preset-typescript": "^7.12.7",
+    "eslint": "^7.14.0",
+    "prettier": "^2.2.0",
+    "typescript": "^4.1.2"
+  }
+}

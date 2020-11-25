@@ -1,0 +1,17 @@
+{
+    "parserOptions": {
+    "ecmaVersion": 2019,
+    "sourceType": "module",
+        "ecmaFeatures": {
+            "jsx": true
+        }
+    },
+    "extends": ["eslint:recommended"],
+    "rules": {
+        "strict": ["error", "never"],
+        "no-extra-semi": "off"
+    },
+    "env": {
+        "browser": true
+    }
+}
